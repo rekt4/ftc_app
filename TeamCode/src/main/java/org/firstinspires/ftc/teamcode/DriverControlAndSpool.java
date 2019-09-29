@@ -12,8 +12,8 @@ public class DriverControlAndSpool extends LinearOpMode{
     private DcMotor spool;
     private DcMotor frontLeft;
     private DcMotor frontRight;
-    private DcMotor backLeft;
-    private DcMotor backRight;
+    //private DcMotor backLeft;
+    //private DcMotor backRight;
     //private DcMotor m1,m2,m3,m4; //these motors will be used for other things
     public void runOpMode(){
         frontLeft  = hardwareMap.get(DcMotor.class, "frontLeft");
@@ -31,7 +31,7 @@ public class DriverControlAndSpool extends LinearOpMode{
         double lrRightStick=0;
         double fbRightStick=0;
         frontRight.setDirection(DcMotor.Direction.REVERSE);
-        backRight.setDirection(DcMotor.Direction.REVERSE);
+        //backRight.setDirection(DcMotor.Direction.REVERSE);
 
         //put all movement code in here
         while(opModeIsActive()){
@@ -52,15 +52,15 @@ public class DriverControlAndSpool extends LinearOpMode{
 
     public void tank(double fbLeftStick, double fbRightStick){
         frontLeft.setPower(fbLeftStick);
-        backLeft.setPower(fbLeftStick);
-        backRight.setPower(fbRightStick);
+        //backLeft.setPower(fbLeftStick);
+        //backRight.setPower(fbRightStick);
         frontRight.setPower(fbRightStick);
         telemetry.addData("Target Power", fbLeftStick);
         telemetry.addData("Target Power", fbRightStick);
         telemetry.addData("Motor Power", frontLeft.getPower());
         telemetry.addData("Motor Power", frontRight.getPower());
-        telemetry.addData("Motor Power", backLeft.getPower());//hi test
-        telemetry.addData("Motor Power", backRight.getPower());
+        //telemetry.addData("Motor Power", backLeft.getPower());//hi test
+        //telemetry.addData("Motor Power", backRight.getPower());
 
     }
 
@@ -68,39 +68,39 @@ public class DriverControlAndSpool extends LinearOpMode{
 
         frontLeft.setPower(fbLeftStick);
         frontRight.setPower(fbLeftStick);
-        backLeft.setPower(fbLeftStick);
-        backLeft.setPower(fbLeftStick);
+        //backLeft.setPower(fbLeftStick);
+        //backLeft.setPower(fbLeftStick);
         telemetry.addData("Target Power", fbLeftStick);
         telemetry.addData("Motor Power", frontLeft.getPower());
         telemetry.addData("Motor Power", frontRight.getPower());
-        telemetry.addData("Motor Power", backLeft.getPower());
-        telemetry.addData("Motor Power", backRight.getPower());
+        //telemetry.addData("Motor Power", backLeft.getPower());
+        //telemetry.addData("Motor Power", backRight.getPower());
     }
 
     public void strafe(double lrLeftStick){
 
         frontLeft.setPower(lrLeftStick);
-        backLeft.setPower(-lrLeftStick);
+        //backLeft.setPower(-lrLeftStick);
         frontRight.setPower(-lrLeftStick);
-        backRight.setPower(lrLeftStick);
+        //backRight.setPower(lrLeftStick);
         telemetry.addData("Target Power", lrLeftStick);
         telemetry.addData("Motor Power", frontLeft.getPower());
         telemetry.addData("Motor Power", frontRight.getPower());
-        telemetry.addData("Motor Power", backLeft.getPower());//hi test
-        telemetry.addData("Motor Power", backRight.getPower());
+        //telemetry.addData("Motor Power", backLeft.getPower());//hi test
+        //telemetry.addData("Motor Power", backRight.getPower());
     }
 
     public void turn(double lrRightStick){
 
         frontLeft.setPower(lrRightStick);
-        backLeft.setPower(lrRightStick);
+        //backLeft.setPower(lrRightStick);
         frontRight.setPower(-lrRightStick);
-        backRight.setPower(-lrRightStick);
+        //backRight.setPower(-lrRightStick);
         telemetry.addData("Target Power", lrRightStick);
         telemetry.addData("Motor Power", frontLeft.getPower());
         telemetry.addData("Motor Power", frontRight.getPower());
-        telemetry.addData("Motor Power", backLeft.getPower());
-        telemetry.addData("Motor Power", backRight.getPower());
+        //telemetry.addData("Motor Power", backLeft.getPower());
+        //telemetry.addData("Motor Power", backRight.getPower());
     }
 
     public void setPowerToSpool(double fbLeftStick){
