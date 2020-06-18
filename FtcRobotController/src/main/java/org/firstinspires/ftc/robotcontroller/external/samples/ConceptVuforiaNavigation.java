@@ -103,7 +103,7 @@ public class ConceptVuforiaNavigation extends LinearOpMode {
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters(cameraMonitorViewId);
 
         // OR...  Do Not Activate the Camera Monitor View, to save power
-        // VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();
+        // VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Supplemental_Modules_(Inorganic_Chemistry)/Descriptive_Chemistry/Main_Group_Reactions/Reactions_in_Aqueous_Solutions/Precipitation_ReactionsParameters();
 
         /*
          * IMPORTANT: You need to obtain your own license key to use Vuforia. The string below with which
